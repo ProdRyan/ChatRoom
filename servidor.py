@@ -25,7 +25,7 @@ new_socket.bind((host_name, port))
 print("Conexion exitosa")
 print("Tu direccion IP es: ", server_ip)
  
-name = input('Enter name: ')
+nombre = input('Ingrese su nombre: ')
  
 new_socket.listen(1) 
  
@@ -38,7 +38,7 @@ print('Conexion establecida. Conectado con: ', add[0])
 client = (conn.recv(1024)).decode()
 print(client + ' se ha conectado.')
  
-conn.send(name.encode())
+conn.send(nombre.encode())
 while True:
     message = input('Tu: ')
     conn.send(message.encode())
